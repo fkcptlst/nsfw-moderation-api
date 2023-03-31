@@ -1,0 +1,23 @@
+# web service
+web:
+  # web service port
+  port: 3000
+  # web service host
+  host: 0.0.0.0
+  # web service log level
+  log_level: debug
+  # worker number
+  workers: 1
+
+# model
+model:
+  name: saved_model.h5
+
+# cache
+cache:
+  # cache folder
+  folder: cache
+  # cache db file
+  db: cache.db
+  # expiry time in seconds
+  expiry: 3600*24*7
