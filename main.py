@@ -33,7 +33,7 @@ async def get_results(images: List[UploadFile] = File(...)):
         for i, cached_result in enumerate(cached_results):
             if cached_result is not None:  # already in cache
                 # cached_result:str, convert str to dict
-                results.append({original_names[i]: eval(cached_result)})
+                results.append(eval(cached_result))
             else:
                 results.append({original_names[i]: {}})
                 input_image_paths.append(image_paths[i])  # only predict images not in cache
